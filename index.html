@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        * {
+            font-size: 1.125rem;
+            font-weight: 500;
+            font-family: Epilogue, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<main class="max-w-[375px] mx-auto  overflow-hidden relative xl:min-w-[1440px]">
+    <div class=" hidden w-full bg-[rgba(0,0,0,0.5)] h-full absolute"></div>
+    <header class=" max-w-[343px] mx-auto flex justify-between pt-4 pb-6 xl:max-w-[1360px] xl:justify-normal xl:items-center">
+        <img src="assets/images/logo.svg" alt="Logo que pone SNAP">
+        <img class="xl:hidden cursor-pointer burguer" src="assets/images/icon-menu.svg" alt="burguer menu">
+        <div class="right-[-258px] z-10 absolute bg-white h-full max-h-[789px] top-0 max-w-[240px] w-full pt-5 pr-5 pl-6 flex flex-col slide-menu">
+            <img class="ml-auto cross cursor-pointer" src="assets/images/icon-close-menu.svg" alt="cross to close tab">
+            <ul class="flex flex-col gap-y-4">
+                <li class="flex items-center gap-x-4 drop-menu overflow-hidden cursor-pointer">
+                    <a class="text-[0.9rem] text-[#686868]">Features</a>
+                    <img src="assets/images/icon-arrow-down.svg" alt="arrow down">
+                </li>
+                <div class="ml-[23px] h-0 overflow-hidden drop-menu" >
+                    <ul class="flex flex-col gap-y-4">
+                        <li class="flex items-center gap-4">
+                            <img src="assets/images/icon-todo.svg" alt="todo Icon">
+                            <a class="text-[.9rem] text-[#686868]" href="">Todo List</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <img src="assets/images/icon-calendar.svg" alt="calendar Icon">
+                            <a class="text-[.9rem] text-[#686868]" href="">Calendar</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <img src="assets/images/icon-reminders.svg" alt="reminders Icon">
+                            <a class="text-[.9rem] text-[#686868]" href="">Reminders</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <img src="assets/images/icon-planning.svg" alt="todo Icon">
+                            <a class="text-[.9rem] text-[#686868]" href="">Planning</a>
+                        </li>
+                    </ul>
+                </div>
+                <li class="flex items-center gap-x-4 drop-menu overflow-hidden cursor-pointer">
+                    <a class="text-[0.9rem] text-[#686868]">Company</a>
+                    <img src="assets/images/icon-arrow-down.svg" alt="arrow down">
+                </li>
+                <div class="ml-[23px] h-0 overflow-hidden drop-menu">
+                    <ul class="flex flex-col gap-y-4">
+                        <li class="flex items-center gap-4">
+                            <a class="text-[.9rem] text-[#686868]" href="">History</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <a class="text-[.9rem] text-[#686868]" href="">Our Team</a>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <a class="text-[.9rem] text-[#686868]" href="">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <li>
+                    <a class="text-[0.9rem] text-[#686868]" href="">Carrers</a>
+                </li>
+                <li>
+                    <a class="text-[0.9rem] text-[#686868]" href="">About</a>
+                </li>
+            </ul>
+            <button class="border-none text-[#686868] text-sm mb-4 mt-8   ">Login</button>
+            <button class="border border-[#686868] text-[#686868] rounded-[14px] text-sm py-[7px]">Register</button>
+        </div>
+        <ul class="xl:flex flex-row gap-x-10 ml-[62px] hidden mr-auto relative">
+            <li id class="flex items-center gap-x-[6px] select-none cursor-pointer drop-menu">
+                <a class="text-[0.9rem] text-[#686868] hover:text-black">Features</a>
+                <img class="arrow"  src="assets/images/icon-arrow-down.svg" alt="arrow down">
+            </li>
+            <!-- modal dropmenu-->
+            <div class="drop-menu overflow-hidden h-0 top-[33px] right-[334px] absolute drop-shadow-2xl bg-white  pl-6 rounded-[10px] w-[170px]">
+                <ul class="flex flex-col gap-y-4 my-6">
+                    <li class="flex items-center gap-x-4">
+                        <img src="assets/images/icon-todo.svg" alt="Todo Icon">
+                        <a class="text-[.9rem] text-[#686868] " href="">Todo List</a>
+                    </li>
+                    <li class="flex items-center gap-x-4">
+                        <img src="assets/images/icon-calendar.svg" alt="Todo Icon">
+                        <a class="text-[.9rem] text-[#686868] " href="">Calendar</a>
+                    </li>
+                    <li class="flex items-center gap-x-4">
+                        <img src="assets/images/icon-reminders.svg" alt="Todo Icon">
+                        <a class="text-[.9rem] text-[#686868] " href="">Reminders</a>
+                    </li>
+                    <li class="flex items-center gap-x-4">
+                        <img src="assets/images/icon-planning.svg" alt="Todo Icon">
+                        <a class="text-[.9rem] text-[#686868] " href="">planning</a>
+                    </li>
+                </ul>
+            </div>
+            <li class="flex items-center gap-x-[6px] select-none cursor-pointer drop-menu">
+                <a class="text-[0.9rem] text-[#686868] hover:text-black">Company</a>
+                <img class="arrow" src="assets/images/icon-arrow-down.svg" alt="arrow down">
+            </li>
+            <!-- modal drop menu-->
+            <div class="drop-menu overflow-hidden h-0 top-[33px] right-[162px] absolute drop-shadow-2xl bg-white pl-6 rounded-[10px] w-[130px]">
+                <ul class="flex flex-col gap-y-4 my-6">
+                    <li class="flex items-center gap-x-4">
+                        <a class="text-[.9rem] text-[#686868] " href="">History</a>
+                    </li>
+                    <li class="flex items-center gap-x-4">
+                        <a class="text-[.9rem] text-[#686868] " href="">Our Team</a>
+                    </li>
+                    <li class="flex items-center gap-x-4">
+                        <a class="text-[.9rem] text-[#686868] " href="">Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+            <li>
+                <a class="text-[0.9rem] text-[#686868] hover:text-black" href="">Carrers</a>
+            </li>
+            <li>
+                <a class="text-[0.9rem] text-[#686868] hover:text-black" href="">About</a>
+            </li>
+        </ul>
+        <div class="flex-row gap-x-4 hidden xl:flex">
+            <button class="border-none text-[#686868] text-sm hover:text-black">Login</button>
+            <button class="border-[1.5px] border-[#686868] text-[#686868] rounded-[14px] text-sm py-[9px] min-w-[106px] hover:text-black hover:border-black">
+                Register
+            </button>
+        </div>
+    </header>
+    <div class="xl:flex xl:flex-row-reverse ">
+        <picture class="">
+            <source media="(min-width: 1280px)" srcset="assets/images/image-hero-desktop.png">
+            <img class="w-[375px] mb-12 xl:min-w-[480px] xl:mr-[130px] xl:mt-[67px] xl:mb-0 xl:h-[640px]"
+                 src="assets/images/image-hero-mobile.png"
+                 alt="imagen con figuras circulares con una persna en mitad tecleando en un portatil">
+        </picture>
+        <section
+                class="w-[343px] mx-auto flex flex-col items-center  xl:min-w-[540px] xl:ml-[165px] xl:mt-[175px] xl:items-start">
+            <h1 class="text-[1.99rem] font-bold leading-none mb-4 xl:text-[4.5rem] xl:mb-[48px] xl:min-w-[540px]">Make
+                remote work</h1>
+            <p class="text-center text-[.9rem] text-[#686868] mb-6 xl:text-start xl:text-[1rem] xl:mb-[51px] xl:min-w-[450px]">
+                Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+                productivity soar.</p>
+            <button class="xl:mb-[108px] mb-12 bg-black text-white w-[136px] text-[.9rem] py-3 rounded-2xl font-bold xl:w-[163px] hover:bg-white hover:text-black hover:border hover:border-black">
+                Learn more
+            </button>
+            <footer class=" mx-auto pb-[94px]">
+                <div class="flex items-center gap-7">
+                    <img class="w-[81px] max-h-[14px] xl:max-w-[113px] xl:max-h-[20px]"
+                         src="assets/images/client-databiz.svg" alt="darabiz logo">
+                    <img class="max-w-[52px] max-h-[26px] xl:max-w-[73px] xl:max-h-[36px]"
+                         src="assets/images/client-audiophile.svg" alt="audiophile logo">
+                    <img class="max-w-[64px] max-h-[14px] xl:max-w-[89px] xl:max-h-[20px]"
+                         src="assets/images/client-meet.svg" alt="meet logo">
+                    <img class="max-w-[58.8px] max-h-[17px] xl:max-w-[82px] xl:max-h-[24px]"
+                         src="assets/images/client-maker.svg" alt="maker logo">
+                </div>
+            </footer>
+        </section>
+    </div>
+
+
+</main>
+
+
+<script src="main.js"></script>
+</body>
+</html>

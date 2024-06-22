@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.active .arrow{
+    transform: rotate(180deg);
+}
+.arrow{
+    transition: transform .5s ease ;
+}
+.drop-menu{
+    transition: height .4s ease ;
+}
+
+.active-slideMenu{
+    right: 0;
+}
+.slide-menu {
+    transition: right .5s ease ;
+}
